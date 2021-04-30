@@ -2,8 +2,16 @@ body {
   background-color: #2b292c;
 }
 
-.card-list {
+.App {
+  display: flex;
+  justify-content: center;
+}
 
+.card-list {
+  display: flex;
+  width: 900px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card-container {
@@ -27,7 +35,7 @@ body {
 }
 
 .pokemen-img {
-  width: 100%;
+  width: 70%;
 }
 
 .title {
