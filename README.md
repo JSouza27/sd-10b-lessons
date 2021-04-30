@@ -1,1 +1,1 @@
-# sd-10b-lessons
+# Repositório criado para armazenar os excercícios da Trybe
