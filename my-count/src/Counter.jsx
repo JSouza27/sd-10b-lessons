@@ -11,10 +11,14 @@ class Counter extends Component {
 
   componentDidMount() {
     console.log("componentDidMount");
+    this.setState({ counter: 10 })
   }
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log("shouldComponentUpdate", this.state, nextState);
+    if (nextState.counter > 13 && nextState.counter < 15) {
+      return false;
+    }
     return true;
   }
 
