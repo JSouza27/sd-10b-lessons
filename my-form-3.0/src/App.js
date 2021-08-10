@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { Route, Switch } from 'react-router'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import Welcome from './pages/ Welcome'
+import Identification from './pages/ Identification';
+import PersonalData from './pages/PersonalData';
+import ProfessionalData from './pages/ProfessionalData';
+import ConfirmationScreen from './pages/ ConfirmationScreen';
+import RegistrationConfirmed from './pages/RegistrationConfirmed';
+
+class App extends Component {
+  render() {
+    return (
+      <Switch>
+        <Route exact path="/" component={ Welcome } />
+        <Route path="/identification" component={ Identification } />
+        <Route path="/personaldata" component={ PersonalData } />
+        <Route path="/professionaldata" component={ ProfessionalData } />
+        <Route path="/confirmationscreen" component={ ConfirmationScreen } />
+        <Route path="/registrationconfirmed" component={ RegistrationConfirmed } />
+      </Switch>
+    )
+  }
 }
 
-export default App;
+export default App
+
