@@ -1,0 +1,10 @@
+use('bloco_24_3');
+
+db.movies.find(
+  {
+    category: {
+      $all: ["action"]
+    },
+    imdbRating: { $gt: 7 }
+  }
+);

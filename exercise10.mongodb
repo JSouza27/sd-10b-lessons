@@ -1,0 +1,13 @@
+use('bloco_24_3');
+
+db.movies.find(
+  {
+    category: {
+      $size: 2
+    }
+  },
+  {
+    title: true,
+    _id: false,
+  }
+);

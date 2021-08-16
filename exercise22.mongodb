@@ -1,0 +1,3 @@
+use('bloco_24_3');
+
+db.movies.find({ $text: { $search: "monstrous criminal"} });
