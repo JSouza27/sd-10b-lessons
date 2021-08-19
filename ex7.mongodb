@@ -1,0 +1,21 @@
+use("erp");
+
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: {
+        sexo: "$sexo",
+        uf: "$endereco.uf"
+      },
+      total: { $sum: 1 }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      sexo: "$_id.sexo",
+      estado: "$_id.uf",
+      total: 1
+    }
+  }
+]);
